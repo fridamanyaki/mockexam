@@ -17,7 +17,7 @@ sh "docker build -t mockexam:latest ."
 stage('Docker login to hub and push the image'){
 sh "docker login -u 'fridahmanyaki' -p 'j3nk1nss' "
 sh "docker tag mockexam:latest fridahmanyaki/mockexam:latest"
-sh "docker push fridahmanyaki/mockexam:latest:latest"
+sh "docker push fridahmanyaki/mockexam:latest"
 }
 
 stage('Apply changes to the environment') {
